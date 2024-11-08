@@ -120,7 +120,7 @@ class BlessServerWinRT(BaseBlessServer):
             winrt_service: BlessGATTServiceWinRT = cast(BlessGATTServiceWinRT, service)
             winrt_service.service_provider.start_advertising(adv_parameters)
         self._advertising = True
-        self._advertising_started.wait()
+        # self._advertising_started.wait()
 
     async def stop(self: "BlessServerWinRT"):
         """
